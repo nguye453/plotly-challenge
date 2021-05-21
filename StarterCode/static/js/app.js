@@ -108,7 +108,7 @@ function updateCharts(sample)
       {
         size: sample_values,
         color: otu_ids,
-        colorscale:"Bluered"
+        colorscale:"Earth"
       }
     };
     var data = [trace1];
@@ -121,16 +121,17 @@ function updateCharts(sample)
     };
     Plotly.newPlot('bubble', data, layout); 
   // Bar Chart
-    var trace1 = {
+    var trace1 = 
+    {
         x: sample_values.slice(0,10).reverse(),
         y: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
         text: otu_labels.slice(0,10).reverse(),
-        name: "Greek",
         type: "bar",
         orientation: "h"
     };
     var data = [trace1];
-    var layout = {
+    var layout = 
+    {
         title: 
         {
           text: "Top 10 Bacteria Cultures Found",
@@ -144,10 +145,8 @@ function updateCharts(sample)
 
 function optionChanged(dropSel)
 {
-  // Fetch new data each time a new sample is selected
   updateCharts(dropSel);
   updateMetadata(dropSel);
 }
 
-// Initialize the dashboard
 init();
