@@ -54,12 +54,12 @@ function updateMetadata(sample)
             { range: [7, 8], color: "177189" },
             { range: [8, 9], color: "13647A" },
           ],
-          threshold: 
+          threshold:
           {
             line: 
-            { 
-              color: "purple", 
-              width: 4 
+            {
+              color: "purple",
+              width: 4
             },
             thickness: 0.75,
             value: result.wfreq
@@ -116,7 +116,7 @@ function updateCharts(sample)
     {
         title: 'Bacteria Cultures Per Sample',
         showlegend: false,
-        xaxis: { title: "OTU ID: " +sample },
+        xaxis: { title: "OTU ID: " + sample },
         margin: { t:30 }
     };
     Plotly.newPlot('bubble', data, layout); 
