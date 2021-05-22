@@ -42,7 +42,7 @@ function updateMetadata(sample)
         type: "indicator",
         mode: "gauge",
         gauge: {
-          axis: { range: [null,9], tickwidth: 1 },
+          axis: { range: [null,9], tickwidth: 1, tickmode: "linear" },
           steps: [
             { range: [0, 1], color: "white" },
             { range: [1, 2], color: "A6D9E7" },
@@ -74,13 +74,6 @@ function updateMetadata(sample)
       height: 400,
       margin: { t: 25, r: 25, l: 25, b: 25 },
       line: { color: 'green' },
-      xaxis: 
-      {
-        showticklabels: true,
-        tickmode: 'linear',
-        tick0: 0,
-        dtick: 1
-      }
     };
   
     Plotly.newPlot("gauge", data, layout);
